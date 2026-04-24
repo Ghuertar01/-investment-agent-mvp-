@@ -1,0 +1,69 @@
+portfolio_context:
+  base_currency: EUR
+  investor_profile: "moderado"
+  max_position_size_pct: 5
+  min_cash_pct: 10
+  disclaimer: "Esto no es asesoramiento financiero. Es un informe informativo generado automáticamente con fuentes oficiales, noticias y OSINT."
+
+watchlist:
+  equities:
+    - ticker: NVDA
+      name: NVIDIA
+      cik: "0001045810"
+      sector: Semiconductors
+    - ticker: ASML
+      name: ASML Holding
+      cik:
+      sector: Semiconductors
+    - ticker: MSFT
+      name: Microsoft
+      cik: "0000789019"
+      sector: Software / AI
+    - ticker: AAPL
+      name: Apple
+      cik: "0000320193"
+      sector: Consumer Technology
+    - ticker: TSLA
+      name: Tesla
+      cik: "0001318605"
+      sector: EV / Energy
+    - ticker: XOM
+      name: Exxon Mobil
+      cik: "0000034088"
+      sector: Energy
+
+macro:
+  fred_series:
+    - id: FEDFUNDS
+      label: Fed Funds Rate
+    - id: CPIAUCSL
+      label: US CPI
+    - id: UNRATE
+      label: US Unemployment Rate
+    - id: DGS10
+      label: US 10Y Treasury Yield
+    - id: DGS2
+      label: US 2Y Treasury Yield
+
+news:
+  query: "(NVIDIA OR ASML OR Microsoft OR Apple OR Tesla OR Exxon OR Federal Reserve OR ECB OR inflation OR interest rates)"
+  language: en
+  page_size: 20
+  sort_by: publishedAt
+
+reddit:
+  subreddits:
+    - investing
+    - stocks
+    - SecurityAnalysis
+    - wallstreetbets
+  limit_per_subreddit: 10
+  min_score: 20
+
+rss_feeds:
+  - name: SEC Press Releases
+    url: https://www.sec.gov/news/pressreleases.rss
+  - name: Federal Reserve Press Releases
+    url: https://www.federalreserve.gov/feeds/press_all.xml
+  - name: ECB Press Releases
+    url: https://www.ecb.europa.eu/rss/press.html
